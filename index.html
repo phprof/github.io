@@ -274,7 +274,17 @@ h1 {letter-spacing: 6px}
 <script>
   document.oncontextmenu = new Function("return false");
   oncontext="return false;";
-</script>    
+</script>
+
+<script>$(document).bind("contextmenu", function(e){if(""!="write"){return false;}});</script>
+  
+<script>
+  document.body.oncopy = function(){event.returnValue=false;}
+</script>  
+
+<style>
+  body{-webkit-user-select:none;-webkit-touch-callout:none;-moz-user-select: none;}
+</style>  
   
 <script>
   // Modal Image Gallery
